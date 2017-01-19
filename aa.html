@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" id="content" size="50">
+	<br><br>
+	<input type="button" id="btn1" value="test方法">
+	<input type="button" id="btn2" value="exec方法">
+	<input type="button" id="btn3" value="search方法">
+	<input type="button" id="btn4" value="match方法">
+	<input type="button" id="btn5" value="replace方法">
+	<input type="button" id="btn6" value="split方法">
+</body>
+</html>
+<script type="text/javascript">
+	window.onload = function (){
+		document.getElementById('btn1').onclick = function (){
+			var content = document.getElementById('content').value;
+			var reg = /\d\d\d/gi;
+			var result = reg.test(content);
+			console.log(result);
+		}
+		document.getElementById('btn2').onclick = function (){
+			var content = document.getElementById('content').value;
+			var reg = /\d\d\d/gi;
+			/*var result = reg.exec(content);
+			console.log(result);*/
+			var result;
+			while(result = reg.exec(content)){
+				console.log(result);
+			}
+		}
+		document.getElementById('btn3').onclick = function (){
+			var content = document.getElementById('content').value;
+			var reg = /\d\d\d/gi;
+			var result = content.search(reg);
+			console.log(result);
+		}
+		document.getElementById('btn4').onclick = function (){
+			var content = document.getElementById('content').value;
+			var reg = /\d\d\d/gi;
+			var result = content.match(reg);
+			console.log(result);
+		}
+		document.getElementById('btn5').onclick = function (){
+			var content = document.getElementById('content').value;
+			var reg = /\d\d\d/gi;
+			var result = content.replace(reg,'刘苗');
+			console.log(result);
+		}
+		document.getElementById('btn6').onclick = function (){
+			var content = document.getElementById('content').value;
+			var reg = /\d\d\d/gi;
+			var result = content.split(reg);
+			console.log(result);
+		}
+	}
+</script>
+
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onmouseenter事件测试</title>
+    <style>
+     	div{
+     		width: 100px;
+     		height: 100px;
+     		background: #abcdef;
+     		position: absolute;
+     		left: 0;
+     		top: 30px;
+     	}
+    </style>
+</head>
+<body>
+	<div>9387askdgfkasd</div>
+	<div>asdfasd</div>
+	<span></span>
+	<div>313sd</div>
+	<div>asdfasdfasd</div>
+	<span></span>
+</body>
+</html>
+<script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+	var aa = $.unique(document.getElementsByTagName("div"));
+	console.log(aa);
+</script>
+
+
